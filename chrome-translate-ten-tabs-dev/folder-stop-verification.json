@@ -1,0 +1,36 @@
+{
+  "mode": "local document page fixture",
+  "browser": "152.0.7977.83",
+  "tabs": [
+    {
+      "tabId": 1145411262,
+      "name": "文档1.pdf",
+      "size": 560,
+      "hash": "e76ecd757861247b45042839a9b5cd7763899991aa1f53cea7989efe93d7c0b7"
+    },
+    {
+      "tabId": 1145411263,
+      "name": "文档2.pdf",
+      "size": 560,
+      "hash": "e26e4e0bff4441c383f495d4eb19b3ce2c90c54629376ecd00d2a44c6492b0a8"
+    },
+    {
+      "tabId": 1145411264,
+      "name": "文档10.pdf",
+      "size": 470565,
+      "hash": "df353ce37ec63a8a5492dc0c6ba7edda98151c1e8c41e65512f7c1dfcc7e4c8c"
+    }
+  ],
+  "incognito": true,
+  "pageErrors": [],
+  "autoTranslate": true,
+  "stopped": true,
+  "clicks": [
+    {
+      "name": "文档1.pdf",
+      "time": 1789117788903,
+      "visibleText": "翻译",
+      "markup": "<button id=\"translate\">翻译</button>"
+    }
+  ]
+}

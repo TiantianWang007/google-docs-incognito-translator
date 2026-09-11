@@ -1,0 +1,27 @@
+{
+  "mode": "live Google Translate",
+  "browser": "152.0.7977.83",
+  "tabs": [
+    {
+      "tabId": 793454134,
+      "name": "文档1.pdf",
+      "size": 37,
+      "hash": "697ed7d435f0ae29cc5d892d8234b1bea3055414331b5b433fa13ae18c6d0cd3"
+    },
+    {
+      "tabId": 793454135,
+      "name": "文档2.pdf",
+      "size": 38,
+      "hash": "1025753c3a8bf8d31731191dd0b7f171958c998f55944d643a8926f8327adb50"
+    },
+    {
+      "tabId": 793454136,
+      "name": "文档10.pdf",
+      "size": 470047,
+      "hash": "d2c5231191f41c2e38d4f684223aab4299c3f1390cbb58560f6e06e97259e05d"
+    }
+  ],
+  "incognito": true,
+  "pageErrors": [],
+  "manualTranslate": true
+}

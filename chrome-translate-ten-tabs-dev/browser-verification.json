@@ -1,0 +1,37 @@
+{
+  "browser": "152.0.7977.83",
+  "extensionId": "mcadhcodnffmabkhjljbeklhgpddaipc",
+  "firstWindow": {
+    "incognito": true,
+    "tabCount": 3,
+    "language": "fr"
+  },
+  "secondWindow": {
+    "tabCount": 1,
+    "language": "zh-TW",
+    "separateWindow": true
+  },
+  "savedLanguageRestored": true,
+  "savedCountRestored": true,
+  "popupErrors": [],
+  "inputChecks": [
+    "Chinese",
+    "native names",
+    "English names",
+    "case-insensitive codes",
+    "mouse selection",
+    "keyboard selection",
+    "IME composition",
+    "invalid input"
+  ],
+  "countChecks": [
+    "default 10",
+    "custom 3",
+    "single tab",
+    "invalid counts",
+    "live preview",
+    "numeric arrows",
+    "invalid saved count"
+  ],
+  "note": "Isolated headless Chrome profile. Google network loads are disabled; actual Chrome extension and window APIs are exercised."
+}
