@@ -1,0 +1,10 @@
+{
+  "name": "google-docs-incognito-translator",
+  "version": "1.4.0",
+  "private": true,
+  "description": "Chrome extension for ordered Google document translation in incognito tabs",
+  "scripts": {
+    "test": "node --test chrome-translate-ten-tabs-dev/launcher.test.mjs chrome-translate-ten-tabs-dev/folder.test.mjs chrome-translate-ten-tabs-dev/translation-queue.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

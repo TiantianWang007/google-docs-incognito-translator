@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+.env
+.env.*
+*.log
+chrome-translate-ten-tabs-dev/test-profile-*/
+chrome-translate-ten-tabs-dev/folder-test-*/
+Thumbs.db
+.DS_Store
