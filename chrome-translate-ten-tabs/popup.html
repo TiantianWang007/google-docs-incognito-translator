@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>谷歌文档翻译 · 无痕多开</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.mjs"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <img class="logo" src="icons/icon48.png" alt="" width="44" height="44">
+      <div><h1>文档翻译，一次多开</h1><p class="subtitle">Google 翻译 · 无痕窗口</p></div>
+    </header>
+    <form id="launch-form" novalidate>
+      <label for="language">翻译成什么语言？</label>
+      <div id="language-picker" class="language-picker">
+        <div class="language-field">
+          <input id="language" name="language" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="language-results" aria-describedby="remember-hint" placeholder="输入语言名称或代码，如：德语 / de" autocomplete="off" spellcheck="false" disabled>
+          <button id="language-toggle" type="button" aria-label="展开语言列表" aria-controls="language-results" disabled>⌄</button>
+        </div>
+        <div id="language-menu" class="language-menu" hidden>
+          <ul id="language-results" role="listbox" aria-label="目标语言"></ul>
+          <p id="language-empty" class="language-empty" role="status" hidden>没有匹配的语言，请试试中文名称或语言代码。</p>
+        </div>
+      </div>
+      <p id="remember-hint" class="hint">支持中文、外文名称和代码；记住上次使用的语言</p>
+      <div class="count-row">
+        <div><label for="tab-count">打开数量</label><p id="count-hint" class="count-hint">1–100 个，记住上次设置</p></div>
+        <div class="count-field"><input id="tab-count" name="tab-count" type="number" min="1" max="100" step="1" value="10" inputmode="numeric" aria-describedby="count-hint" required disabled><span>个</span></div>
+      </div>
+      <section class="preview" aria-label="即将打开的内容">
+        <div class="preview-top"><span class="window-dot"></span><span>一个新的无痕窗口</span><span id="count-badge" class="badge">10 个标签页</span></div>
+        <div id="tab-strip" class="tab-strip" aria-hidden="true"></div>
+        <div class="translation"><span>自动检测原文</span><span class="arrow" aria-hidden="true">→</span><strong id="target-label">德语</strong></div>
+        <p class="document-note">每页均进入「文档」翻译模式</p>
+      </section>
+      <button id="open-button" class="primary" type="submit" disabled><span id="button-label">打开 10 个无痕翻译页</span><span aria-hidden="true">↗</span></button>
+      <p id="status" class="status" role="status" aria-live="polite" hidden></p>
+    </form>
+    <button id="folder-button" class="folder-entry" type="button">选择文件夹，按序放入文档 <span aria-hidden="true">↗</span></button>
+    <footer>
+      <span>打开后，在各标签页选择文档</span>
+      <button id="help-button" class="text-button" type="button" aria-expanded="false" aria-controls="help">使用帮助</button>
+    </footer>
+    <div id="help" class="help" hidden>
+      <p>输入或调整打开数量（1–100 个）。每次点击会新开一个无痕窗口，所有标签页使用相同的目标语言。语言和数量均会记住上次的设置。</p>
+      <p>也可选择文件夹，按文档总数打开标签页，每页自动放入一个文件，并可勾选按顺序自动点击「翻译」。文件夹模式需要开启「在无痕模式下启用」。</p>
+      <p>如果还想在无痕窗口的工具栏中使用本扩展，可进入扩展详情，开启「在无痕模式下启用」。</p>
+      <button id="settings-button" class="text-button" type="button">打开扩展详情 ↗</button>
+    </div>
+  </main>
+</body>
+</html>

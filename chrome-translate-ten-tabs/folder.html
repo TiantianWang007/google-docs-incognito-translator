@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文件夹文档 · 按序放入翻译页</title>
+  <link rel="stylesheet" href="popup.css"><link rel="stylesheet" href="folder.css">
+  <script type="module" src="folder.mjs"></script>
+</head>
+<body>
+  <main class="folder-app">
+    <header class="folder-header">
+      <img class="logo" src="icons/icon48.png" alt="" width="44" height="44">
+      <div><h1>文件夹文档，按序打开</h1><p class="subtitle">一份文档一个标签页 · Google 文档翻译</p></div>
+      <button id="settings-button" class="text-button" type="button">扩展设置 ↗</button>
+    </header>
+    <div id="permission-note" class="permission-note" hidden>
+      <div><strong>请先开启无痕权限</strong><p>进入扩展详情，打开「在无痕模式下启用」，然后回到此页面。</p></div>
+      <button id="permission-button" type="button">打开扩展详情 ↗</button>
+    </div>
+    <div class="folder-layout">
+      <section class="settings-card" aria-label="文档导入设置">
+        <h2>选择文件夹</h2>
+        <input id="folder-input" type="file" webkitdirectory multiple hidden>
+        <button id="choose-folder" class="choose-folder" type="button">选择文件夹…</button>
+        <p id="folder-name" class="folder-name">尚未选择文件夹</p>
+        <label class="check-label"><input id="include-subfolders" type="checkbox">包含子文件夹</label>
+        <div class="divider"></div>
+        <label for="language">翻译成什么语言？</label>
+        <div id="language-picker" class="language-picker">
+          <div class="language-field">
+            <input id="language" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="language-results" aria-describedby="remember-hint" placeholder="输入语言名称或代码" autocomplete="off" spellcheck="false" disabled>
+            <button id="language-toggle" type="button" aria-label="展开语言列表" aria-controls="language-results" disabled>⌄</button>
+          </div>
+          <div id="language-menu" class="language-menu" hidden><ul id="language-results" role="listbox" aria-label="目标语言"></ul><p id="language-empty" class="language-empty" role="status" hidden>没有匹配的语言，请试试中文名称或语言代码。</p></div>
+        </div>
+        <p id="remember-hint" class="hint">支持中文名称、外文名称和语言代码</p>
+        <label class="check-label"><input id="auto-translate" type="checkbox">按顺序自动点击「翻译」</label>
+        <p class="auto-note">按列表顺序逐个点击，间隔 2 秒。翻译完成后可在各页查看结果。</p>
+        <div class="batch-summary"><strong id="document-count">0</strong><span>份文档 → <b id="target-label">德语</b><small>按文档总数开页，每页一个文件</small></span></div>
+        <button id="start-button" class="primary" type="button" disabled>选择文件夹后开始</button>
+        <button id="retry-button" class="choose-folder" type="button" hidden>重新打开失败项</button>
+        <button id="stop-translate" class="choose-folder" type="button" hidden>停止自动点击</button>
+        <button id="view-window" class="text-button" type="button" hidden>查看翻译窗口 ↗</button>
+        <p class="local-note">任务运行期间请保持此页面打开。勾选自动点击后，文档会提交给谷歌翻译；列表显示点击状态，译文在各标签页查看。</p>
+        <p id="status" class="status" role="status" aria-live="polite" hidden></p>
+      </section>
+      <section class="documents-card" aria-label="文件顺序和填入进度">
+        <div class="list-heading"><div><h2>文档顺序</h2><p>按文件名自然排序：1、2、10；列表顺序就是标签页顺序。</p></div><span id="progress" role="status">等待选择</span></div>
+        <p id="empty-list" class="empty-list">选择文件夹后，在这里查看将要放入的文档。<br><small>支持 PDF、DOCX、PPTX、XLSX，每份不超过 10 MB。</small></p>
+        <div class="table-wrap"><table id="document-table" hidden><thead><tr><th scope="col">序号</th><th scope="col">文档</th><th scope="col">大小</th><th scope="col">状态</th></tr></thead><tbody id="document-rows"></tbody></table></div>
+        <details id="skipped-section" hidden><summary id="skipped-summary"></summary><ul id="skipped-list"></ul></details>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

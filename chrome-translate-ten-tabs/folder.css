@@ -1,0 +1,48 @@
+body { width: auto; min-width: 360px; min-height: 100vh; background: #f4f6fb; }
+.folder-app { max-width: 1180px; margin: 0 auto; padding: 36px 28px; }
+.folder-header { margin-bottom: 28px; }
+.folder-header h1 { font-size: 23px; }
+.folder-header #settings-button { margin-left: auto; font-size: 12px; }
+.folder-layout { display: grid; grid-template-columns: 310px minmax(0, 1fr); gap: 24px; align-items: start; }
+.settings-card, .documents-card { background: #fff; border: 1px solid #e2e7f1; border-radius: 14px; padding: 23px; }
+h2 { margin: 0 0 16px; font-size: 16px; }
+.choose-folder { width: 100%; padding: 11px 14px; border: 1px solid #cbd5f2; border-radius: 8px; background: #f7f9ff; color: #3d54b1; font-size: 13px; }
+.choose-folder:hover { background: #ebf0ff; }
+.folder-name { font-size: 12px; color: #65728a; overflow-wrap: anywhere; margin: 12px 0; }
+.check-label { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 400; color: #59657d; }
+input[type=checkbox] { accent-color: #465dc5; }
+.divider { height: 1px; background: #e8ecf4; margin: 22px 0; }
+.batch-summary { display: flex; align-items: center; gap: 12px; background: #f4f6ff; border-radius: 8px; padding: 14px; margin: 20px 0; }
+.batch-summary > strong { font-size: 30px; color: #465dc5; }
+.batch-summary span { color: #52607c; font-size: 12px; }
+.batch-summary small { display: block; margin-top: 6px; font-size: 10px; color: #7e89a0; }
+.primary { font-size: 13px; justify-content: center; padding: 0 7px; }
+#retry-button, #view-window, #stop-translate { margin-top: 12px; }
+.auto-note { font-size: 10px; color: #7b879d; line-height: 1.7; margin: 0 0 15px 23px; }
+.local-note { font-size: 11px; color: #778399; line-height: 1.8; margin: 15px 0 0; }
+.list-heading { display: flex; align-items: start; justify-content: space-between; gap: 15px; margin-bottom: 20px; }
+.list-heading h2 { margin-bottom: 8px; }
+.list-heading p { font-size: 11px; line-height: 1.6; color: #7b879d; margin: 0; }
+#progress { flex: none; border-radius: 20px; color: #4054b2; background: #eef2ff; padding: 6px 10px; font-size: 11px; }
+.empty-list { padding: 65px 10px; text-align: center; color: #7d879c; font-size: 13px; line-height: 2.2; }
+.empty-list small { font-size: 11px; }
+.table-wrap { overflow: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th { text-align: left; color: #7b869b; font-size: 11px; font-weight: 400; background: #f7f9fc; padding: 10px 8px; }
+td { padding: 13px 8px; border-bottom: 1px solid #edf0f6; vertical-align: top; }
+td:first-child { color: #8b96ac; width: 40px; }
+.document-name { overflow-wrap: anywhere; max-width: 280px; }
+.document-name small { display: block; color: #8a95ab; margin-top: 5px; font-size: 10px; }
+.file-size { white-space: nowrap; color: #738199; }
+.document-state { color: #7a8599; min-width: 90px; font-size: 11px; line-height: 1.6; }
+.document-state[data-state=loaded], .document-state[data-state=clicked] { color: #23885b; }
+.document-state[data-state=uncertain] { color: #997020; }
+.document-state[data-state=error] { color: #b54249; }
+.document-state[data-state=loading], .document-state[data-state=waiting], .document-state[data-state=clicking] { color: #465dc5; }
+#skipped-section { margin-top: 20px; font-size: 11px; color: #7d879a; }
+#skipped-section summary { cursor: pointer; }
+#skipped-list { padding-left: 18px; line-height: 1.9; overflow-wrap: anywhere; }
+.permission-note { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; background: #fff7e5; border: 1px solid #eedbb0; color: #805e22; border-radius: 10px; margin-bottom: 22px; font-size: 13px; }
+.permission-note p { margin: 6px 0 0; font-size: 12px; }
+.permission-note button { flex: none; background: #fff; border: 1px solid #dcc490; border-radius: 6px; padding: 9px 11px; color: #805e22; font-size: 12px; }
+@media (max-width: 780px) { .folder-app { padding: 22px 15px; } .folder-layout { grid-template-columns: 1fr; } .folder-header h1 { font-size: 18px; } .permission-note { align-items: start; flex-direction: column; } }

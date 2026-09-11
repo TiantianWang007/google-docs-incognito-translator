@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "谷歌文档翻译 · 无痕多开",
+  "version": "1.4.0",
+  "description": "选择语言和数量打开无痕翻译页，或选择文件夹按序放入文档，并可按列表顺序自动点击翻译。",
+  "minimum_chrome_version": "109",
+  "permissions": ["storage"],
+  "host_permissions": ["https://translate.google.com/*"],
+  "content_scripts": [{ "matches": ["https://translate.google.com/*"], "js": ["document-loader.js"], "run_at": "document_idle" }],
+  "incognito": "spanning",
+  "background": { "service_worker": "background.mjs", "type": "module" },
+  "action": {
+    "default_title": "选择语言和数量，打开无痕翻译页",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+}
